@@ -4,7 +4,7 @@
 
 3DCG의 **법선(노멀)** 을 애니메이션과 움직이는 그림으로 설명하는 자료입니다.
 
-**▶ 움직이는 그림 (GitHub Pages): https://gyogy6.github.io/Sayu_NormalsTips/ko/**
+**▶ 움직이는 그림 (GitHub Pages): https://gyogy6.github.io/Sayu_NormalsTips_WebPages/ko/**
 
 ![법선과 빛의 각도](images/ch01_ndotl.gif)
 
