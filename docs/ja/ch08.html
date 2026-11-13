@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>8. ノーマルマップとの関係 — 法線の Tips</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="home" href="index.html">法線の Tips</a>
+  <nav class="lang" aria-label="Language"><a href="../ja/ch08.html" aria-current="page">日本語</a><a href="../en/ch08.html">English</a><a href="../ko/ch08.html">한국어</a></nav>
+</header>
+<main>
+<h1>8. ノーマルマップとの関係</h1>
+<p class="lead">ノーマルマップは頂点の法線を土台にしている。</p>
+<section class="demo" id="demo" data-scene="nmap">
+<div class="stage"><canvas id="view" width="380" height="380"></canvas></div>
+<div class="controls">
+  <label><input type="checkbox" id="useMap" checked> ノーマルマップを使う</label>
+  <label class="row"><span>ノーマルマップの強さ<output id="strengthOut"></output></span>
+<input type="range" id="strength" min="0" max="1.5" step="0.05" value="0.6"></label>
+  <label><input type="checkbox" id="flipGreen"> 緑（Y）を反対に読む</label>
+  <fieldset><legend>土台の頂点の法線</legend><label><input type="radio" name="nbase" value="smooth" checked> スムーズ（頂点の法線）</label><label><input type="radio" name="nbase" value="flat"> フラット（面の法線）</label></fieldset>
+  <label class="row"><span>光の向き（左右）<output id="azOut"></output></span>
+<input type="range" id="az" min="-180" max="180" step="1" value="-40"></label>
+  <label class="row"><span>光の高さ<output id="elOut"></output></span>
+<input type="range" id="el" min="-80" max="80" step="1" value="50"></label>
+  <label><input type="checkbox" id="toon"> トゥーンで表示</label>
+  <label class="row"><span>トゥーンのしきい値<output id="toonTOut"></output></span>
+<input type="range" id="toonT" min="-0.9" max="0.9" step="0.05" value="0.3"></label>
+  <label><input type="checkbox" id="showNormals"> 頂点の法線を表示</label>
+  <div class="hint">三角形の数: <span id="triOut"></span> · 図をドラッグすると回せます。</div>
+</div>
+</section>
+<script src="../assets/normals.js"></script>
+<script>NormalsDemo.viewer();</script>
+<ul class="notes">
+<li>ノーマルマップは、頂点の法線（と UV の向き）を土台にして、その上で法線を少し傾ける情報です。</li>
+<li>「緑（Y）を反対に読む」をオンにすると、でこぼこの上下が逆になり、光の当たり方がおかしくなります。</li>
+<li>土台を「フラット」にすると、同じノーマルマップでも面の角が見えます。土台の法線が変わると、結果も変わります。</li>
+</ul>
+<p><a href="https://github.com/gyogy6/Sayu_NormalsTips/blob/main/ja/08_normal-maps.md">くわしい解説（GitHub）</a></p>
+<nav class="pager"><a href="ch07.html">← 7. トゥーンで法線の差が目立つ理由</a><a href="ch09.html">9. 書き出し・読み込みでの注意 →</a></nav>
+</main>
+<footer>文章と図: CC BY 4.0 ／ コード: MIT</footer>
+</body>
+</html>

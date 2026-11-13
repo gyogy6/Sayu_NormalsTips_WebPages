@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6. Seams between separate meshes — Normals Tips</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="home" href="index.html">Normals Tips</a>
+  <nav class="lang" aria-label="Language"><a href="../ja/ch06.html">日本語</a><a href="../en/ch06.html" aria-current="page">English</a><a href="../ko/ch06.html">한국어</a></nav>
+</header>
+<main>
+<h1>6. Seams between separate meshes</h1>
+<p class="lead">Why the shading breaks, and common ways to match normals.</p>
+<section class="demo" id="demo" data-scene="split">
+<div class="stage"><canvas id="view" width="380" height="380"></canvas></div>
+<div class="controls">
+  <fieldset><legend>Seam handling</legend><label><input type="radio" name="fixMode" value="separate" checked> A As is (each mesh on its own)</label><label><input type="radio" name="fixMode" value="boundary"> B Match seam vertices only</label><label><input type="radio" name="fixMode" value="transfer"> C Copy from a smooth shape (range R)</label></fieldset>
+  <label class="row"><span>Range R<output id="radiusOut"></output></span>
+<input type="range" id="radius" min="0" max="1.2" step="0.05" value="0.6"></label>
+  <label><input type="checkbox" id="falloff" checked> Weaken with distance (falloff)</label>
+  <label class="row"><span>Light direction (left/right)<output id="azOut"></output></span>
+<input type="range" id="az" min="-180" max="180" step="1" value="-40"></label>
+  <label class="row"><span>Light height<output id="elOut"></output></span>
+<input type="range" id="el" min="-80" max="80" step="1" value="-10"></label>
+  <label><input type="checkbox" id="toon" checked> Toon shading</label>
+  <label class="row"><span>Toon threshold<output id="toonTOut"></output></span>
+<input type="range" id="toonT" min="-0.9" max="0.9" step="0.05" value="0.3"></label>
+  <label><input type="checkbox" id="showNormals"> Show vertex normals</label>
+  <div class="hint">Triangles: <span id="triOut"></span> · Drag the view to turn it.</div>
+</div>
+</section>
+<script src="../assets/normals.js"></script>
+<script>NormalsDemo.viewer();</script>
+<ul class="notes">
+<li>The upper and lower parts are separate meshes with different density. The seam vertices are at exactly the same positions.</li>
+<li><b>A</b>: each mesh averages only its own faces, so the normals disagree at the seam and a shading line appears.</li>
+<li><b>B</b>: only the seam vertices get the normal computed from the joined shape. The line disappears.</li>
+<li><b>C</b>: within range R of the seam, normals are copied from a smooth shape (a sphere here). Turn off “Weaken with distance” and the change becomes sudden at the edge of the range.</li>
+</ul>
+<p><a href="https://github.com/gyogy6/Sayu_NormalsTips/blob/main/en/06_seams-between-meshes.md">Full explanation (GitHub)</a></p>
+<nav class="pager"><a href="ch05.html">← 5. Custom normals</a><a href="ch07.html">7. Why toon shading shows normal errors →</a></nav>
+</main>
+<footer>Text and figures: CC BY 4.0 / Code: MIT</footer>
+</body>
+</html>

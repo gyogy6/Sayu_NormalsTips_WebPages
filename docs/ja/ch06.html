@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6. 別々のメッシュの継ぎ目 — 法線の Tips</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="home" href="index.html">法線の Tips</a>
+  <nav class="lang" aria-label="Language"><a href="../ja/ch06.html" aria-current="page">日本語</a><a href="../en/ch06.html">English</a><a href="../ko/ch06.html">한국어</a></nav>
+</header>
+<main>
+<h1>6. 別々のメッシュの継ぎ目</h1>
+<p class="lead">影が割れる理由と、法線をそろえる一般的な方法。</p>
+<section class="demo" id="demo" data-scene="split">
+<div class="stage"><canvas id="view" width="380" height="380"></canvas></div>
+<div class="controls">
+  <fieldset><legend>継ぎ目の処理</legend><label><input type="radio" name="fixMode" value="separate" checked> A そのまま（メッシュごとに計算）</label><label><input type="radio" name="fixMode" value="boundary"> B 継ぎ目の頂点だけそろえる</label><label><input type="radio" name="fixMode" value="transfer"> C なめらかな形から写す（範囲 R）</label></fieldset>
+  <label class="row"><span>範囲 R<output id="radiusOut"></output></span>
+<input type="range" id="radius" min="0" max="1.2" step="0.05" value="0.6"></label>
+  <label><input type="checkbox" id="falloff" checked> 距離で弱める（減衰）</label>
+  <label class="row"><span>光の向き（左右）<output id="azOut"></output></span>
+<input type="range" id="az" min="-180" max="180" step="1" value="-40"></label>
+  <label class="row"><span>光の高さ<output id="elOut"></output></span>
+<input type="range" id="el" min="-80" max="80" step="1" value="-10"></label>
+  <label><input type="checkbox" id="toon" checked> トゥーンで表示</label>
+  <label class="row"><span>トゥーンのしきい値<output id="toonTOut"></output></span>
+<input type="range" id="toonT" min="-0.9" max="0.9" step="0.05" value="0.3"></label>
+  <label><input type="checkbox" id="showNormals"> 頂点の法線を表示</label>
+  <div class="hint">三角形の数: <span id="triOut"></span> · 図をドラッグすると回せます。</div>
+</div>
+</section>
+<script src="../assets/normals.js"></script>
+<script>NormalsDemo.viewer();</script>
+<ul class="notes">
+<li>上と下は別々のメッシュで、分け方の細かさも違います。継ぎ目の頂点の位置はぴったり合っています。</li>
+<li><b>A</b>：それぞれが自分の面だけで平均するので、継ぎ目で法線が食い違い、影の線が出ます。</li>
+<li><b>B</b>：継ぎ目の頂点だけ、つないだ形で計算した法線にそろえます。線は消えます。</li>
+<li><b>C</b>：継ぎ目から範囲 R の中で、なめらかな形（ここでは球）の法線を写します。「距離で弱める」を外すと、範囲のはしで急に切り替わります。</li>
+</ul>
+<p><a href="https://github.com/gyogy6/Sayu_NormalsTips/blob/main/ja/06_seams-between-meshes.md">くわしい解説（GitHub）</a></p>
+<nav class="pager"><a href="ch05.html">← 5. カスタム法線</a><a href="ch07.html">7. トゥーンで法線の差が目立つ理由 →</a></nav>
+</main>
+<footer>文章と図: CC BY 4.0 ／ コード: MIT</footer>
+</body>
+</html>

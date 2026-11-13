@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2. 면 법선과 정점 법선 — 법선 Tips</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="home" href="index.html">법선 Tips</a>
+  <nav class="lang" aria-label="Language"><a href="../ja/ch02.html">日本語</a><a href="../en/ch02.html">English</a><a href="../ko/ch02.html" aria-current="page">한국어</a></nav>
+</header>
+<main>
+<h1>2. 면 법선과 정점 법선</h1>
+<p class="lead">플랫과 스무스, 각도로 나누는 방법.</p>
+<section class="demo" id="demo" data-scene="basic">
+<div class="stage"><canvas id="view" width="380" height="380"></canvas></div>
+<div class="controls">
+  <label class="row"><span>모양</span><select id="shape"><option value="sphere" selected>구</option><option value="cylinder">원기둥</option></select></label>
+  <div id="segRow"><label class="row"><span>분할 수<output id="segOut"></output></span>
+<input type="range" id="seg" min="4" max="32" step="1" value="12"></label></div>
+  <fieldset><legend>법선</legend><label><input type="radio" name="mode" value="flat"> 플랫 (면 법선)</label><label><input type="radio" name="mode" value="smooth" checked> 스무스 (정점 법선)</label></fieldset>
+  <label><input type="checkbox" id="useAngle"> 각도로 나누기</label>
+  <label class="row"><span>임계 각도<output id="angleOut"></output></span>
+<input type="range" id="angle" min="0" max="180" step="1" value="30"></label>
+  <label class="row"><span>빛의 방향 (좌우)<output id="azOut"></output></span>
+<input type="range" id="az" min="-180" max="180" step="1" value="-40"></label>
+  <label class="row"><span>빛의 높이<output id="elOut"></output></span>
+<input type="range" id="el" min="-80" max="80" step="1" value="30"></label>
+  <label><input type="checkbox" id="toon"> 툰으로 표시</label>
+  <label class="row"><span>툰 임계값<output id="toonTOut"></output></span>
+<input type="range" id="toonT" min="-0.9" max="0.9" step="0.05" value="0.3"></label>
+  <label><input type="checkbox" id="showNormals"> 정점 법선 표시</label>
+  <div class="hint">삼각형 수: <span id="triOut"></span> · 그림을 드래그하면 돌릴 수 있습니다.</div>
+</div>
+</section>
+<script src="../assets/normals.js"></script>
+<script>NormalsDemo.viewer();</script>
+<ul class="notes">
+<li><b>플랫</b>: 삼각형의 세 정점 모두 면의 법선을 씁니다. 면 안의 밝기가 같아서 각져 보입니다.</li>
+<li><b>스무스</b>: 정점에 주변 면 법선의 평균을 두고, 삼각형 안에서는 세 개를 섞습니다. 둥글게 보이지만 윤곽은 각진 그대로입니다.</li>
+<li>원기둥에서 '각도로 나누기'를 켜 보세요. 옆면끼리는 360° ÷ 분할 수, 윗면과 옆면은 90°입니다. 임계값이 그 사이에 있으면 옆면만 매끄러워집니다.</li>
+<li>'정점 법선 표시'를 켜면 한 위치에 법선이 여러 개 있는 곳(정점이 나뉜 곳)이 보입니다.</li>
+</ul>
+<p><a href="https://github.com/gyogy6/Sayu_NormalsTips/blob/main/ko/02_face-and-vertex-normals.md">자세한 설명 (GitHub)</a></p>
+<nav class="pager"><a href="ch01.html">← 1. 법선이란</a><a href="ch03.html">3. 정점 법선을 평균 내는 방법 →</a></nav>
+</main>
+<footer>글과 그림: CC BY 4.0 / 코드: MIT</footer>
+</body>
+</html>

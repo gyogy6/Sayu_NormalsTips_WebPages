@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1. What is a normal? — Normals Tips</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="home" href="index.html">Normals Tips</a>
+  <nav class="lang" aria-label="Language"><a href="../ja/ch01.html">日本語</a><a href="../en/ch01.html" aria-current="page">English</a><a href="../ko/ch01.html">한국어</a></nav>
+</header>
+<main>
+<h1>1. What is a normal?</h1>
+<p class="lead">How the facing of a surface and the light angle decide brightness.</p>
+<section class="demo" id="demo">
+<div class="stage">
+  <canvas id="diagram" width="300" height="300"></canvas>
+  <div class="pair">
+    <figure><canvas id="sphere" width="200" height="200"></canvas><figcaption>Smooth</figcaption></figure>
+    <figure><canvas id="sphereToon" width="200" height="200"></canvas><figcaption>Toon</figcaption></figure>
+  </div>
+</div>
+<div class="controls">
+  <label class="row"><span>Surface tilt<output id="tiltOut"></output></span>
+<input type="range" id="tilt" min="-60" max="60" step="1" value="0"></label>
+  <label class="row"><span>Light direction<output id="lightOut"></output></span>
+<input type="range" id="light" min="-180" max="180" step="1" value="40"></label>
+  <label class="row"><span>Toon threshold<output id="toonTOut"></output></span>
+<input type="range" id="toonT" min="-0.9" max="0.9" step="0.05" value="0.3"></label>
+  <div class="readout">
+    <span>Angle θ between N and L</span><b id="thetaOut"></b>
+    <span>N·L = cos θ</span><b id="dotOut"></b>
+    <span>Brightness max(0, N·L)</span><b id="brightOut"></b>
+    <span>Toon (1 = lit, 0 = shadow)</span><b id="toonOut"></b>
+  </div>
+</div>
+</section>
+<script src="../assets/normals.js"></script>
+<script>NormalsDemo.ch01();</script>
+<ul class="notes">
+<li><b>N</b> is the surface normal (a unit-length direction perpendicular to the surface). <b>L</b> is the direction the light comes from.</li>
+<li>Brightness is <code>max(0, N·L)</code> = <code>max(0, cos θ)</code>: 1 when the light faces the surface, 0 from the side, and still 0 from behind.</li>
+<li>Toon shading splits into two colors by whether <code>N·L</code> is above a threshold. Near the threshold, a tiny change of direction flips the color.</li>
+<li>Move either the surface or the light: brightness depends only on the <b>difference of the two angles</b>.</li>
+</ul>
+<p><a href="https://github.com/gyogy6/Sayu_NormalsTips/blob/main/en/01_what-is-a-normal.md">Full explanation (GitHub)</a></p>
+<nav class="pager"><a href="index.html">← Contents</a><a href="ch02.html">2. Face normals and vertex normals →</a></nav>
+</main>
+<footer>Text and figures: CC BY 4.0 / Code: MIT</footer>
+</body>
+</html>

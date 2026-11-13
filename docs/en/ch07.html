@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7. Why toon shading shows normal errors — Normals Tips</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="home" href="index.html">Normals Tips</a>
+  <nav class="lang" aria-label="Language"><a href="../ja/ch07.html">日本語</a><a href="../en/ch07.html" aria-current="page">English</a><a href="../ko/ch07.html">한국어</a></nav>
+</header>
+<main>
+<h1>7. Why toon shading shows normal errors</h1>
+<p class="lead">The threshold, and how much the surface curves.</p>
+<section class="demo" id="demo" data-scene="noise">
+<div class="stage"><canvas id="view" width="380" height="380"></canvas></div>
+<div class="controls">
+  <label class="row"><span>Bumpiness<output id="ampOut"></output></span>
+<input type="range" id="amp" min="0" max="0.06" step="0.005" value="0.025"></label>
+  <label class="row"><span>Soften the shadow edge<output id="softOut"></output></span>
+<input type="range" id="soft" min="0" max="0.3" step="0.01" value="0"></label>
+  <label class="row"><span>Light direction (left/right)<output id="azOut"></output></span>
+<input type="range" id="az" min="-180" max="180" step="1" value="-40"></label>
+  <label class="row"><span>Light height<output id="elOut"></output></span>
+<input type="range" id="el" min="-80" max="80" step="1" value="30"></label>
+  <label><input type="checkbox" id="toon" checked> Toon shading</label>
+  <label class="row"><span>Toon threshold<output id="toonTOut"></output></span>
+<input type="range" id="toonT" min="-0.9" max="0.9" step="0.05" value="0.3"></label>
+  <label><input type="checkbox" id="showNormals"> Show vertex normals</label>
+  <div class="hint">Triangles: <span id="triOut"></span> · Drag the view to turn it.</div>
+</div>
+</section>
+<script src="../assets/normals.js"></script>
+<script>NormalsDemo.viewer();</script>
+<ul class="notes">
+<li>The sphere has bumps so small you can hardly see them. With smooth shading (toon off) they are almost invisible.</li>
+<li>With toon shading, the shadow edge wobbles. Near the threshold, small normal differences become the shape of the line.</li>
+<li>Raising “Soften the shadow edge” blends a little around the threshold, so the wobble stands out less.</li>
+</ul>
+<p><a href="https://github.com/gyogy6/Sayu_NormalsTips/blob/main/en/07_why-toon-shows-normal-errors.md">Full explanation (GitHub)</a></p>
+<nav class="pager"><a href="ch06.html">← 6. Seams between separate meshes</a><a href="ch08.html">8. Normal maps →</a></nav>
+</main>
+<footer>Text and figures: CC BY 4.0 / Code: MIT</footer>
+</body>
+</html>

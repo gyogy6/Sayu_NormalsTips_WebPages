@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4. 하드 엣지와 UV 이음매 — 법선 Tips</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="home" href="index.html">법선 Tips</a>
+  <nav class="lang" aria-label="Language"><a href="../ja/ch04.html">日本語</a><a href="../en/ch04.html">English</a><a href="../ko/ch04.html" aria-current="page">한국어</a></nav>
+</header>
+<main>
+<h1>4. 하드 엣지와 UV 이음매</h1>
+<p class="lead">정점이 나뉘어도 그림자는 갈라지지 않는다. 갈라지는 것은 법선이 나뉠 때.</p>
+<section class="demo" id="demo" data-scene="seam">
+<div class="stage"><canvas id="view" width="380" height="380"></canvas></div>
+<div class="controls">
+  <label class="row"><span>분할 수<output id="segOut"></output></span>
+<input type="range" id="seg" min="6" max="24" step="1" value="12"></label>
+  <fieldset><legend>이음매 정점의 법선</legend><label><input type="radio" name="seamMode" value="joined"> 맞춘다 (양쪽 면으로 평균)</label><label><input type="radio" name="seamMode" value="separate" checked> 따로 계산 (한쪽 면으로만 평균)</label></fieldset>
+  <label class="row"><span>빛의 방향 (좌우)<output id="azOut"></output></span>
+<input type="range" id="az" min="-180" max="180" step="1" value="-40"></label>
+  <label class="row"><span>빛의 높이<output id="elOut"></output></span>
+<input type="range" id="el" min="-80" max="80" step="1" value="30"></label>
+  <label><input type="checkbox" id="toon" checked> 툰으로 표시</label>
+  <label class="row"><span>툰 임계값<output id="toonTOut"></output></span>
+<input type="range" id="toonT" min="-0.9" max="0.9" step="0.05" value="0.3"></label>
+  <label><input type="checkbox" id="showNormals"> 정점 법선 표시</label>
+  <div class="hint">정점 수: <span id="vertOut"></span> · 그림을 드래그하면 돌릴 수 있습니다.</div>
+</div>
+</section>
+<script src="../assets/normals.js"></script>
+<script>NormalsDemo.viewer();</script>
+<ul class="notes">
+<li>이 구는 앞쪽 세로선에서 정점이 나뉘어 있습니다(UV 이음매와 같은 상태).</li>
+<li><b>맞춘다</b>: 나뉜 정점끼리 같은 법선을 가지므로 그림자가 갈라지지 않습니다. 정점이 나뉜 것 자체는 문제가 아닙니다.</li>
+<li><b>따로 계산</b>: 나뉜 정점이 자기 쪽 면으로만 평균을 냅니다. 양쪽 방향이 달라서 이음매를 따라 그림자 선이 생깁니다. 툰으로 빛을 돌려 보면 잘 보입니다.</li>
+<li>'정점 법선 표시'로 이음매 위에 법선이 두 개씩 있는지, 하나로 겹쳐 있는지 볼 수 있습니다.</li>
+</ul>
+<p><a href="https://github.com/gyogy6/Sayu_NormalsTips/blob/main/ko/04_hard-edges-and-uv-seams.md">자세한 설명 (GitHub)</a></p>
+<nav class="pager"><a href="ch03.html">← 3. 정점 법선을 평균 내는 방법</a><a href="ch05.html">5. 커스텀 법선 →</a></nav>
+</main>
+<footer>글과 그림: CC BY 4.0 / 코드: MIT</footer>
+</body>
+</html>

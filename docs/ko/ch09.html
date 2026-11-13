@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>9. 내보내기·불러오기에서 주의할 점 — 법선 Tips</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="home" href="index.html">법선 Tips</a>
+  <nav class="lang" aria-label="Language"><a href="../ja/ch09.html">日本語</a><a href="../en/ch09.html">English</a><a href="../ko/ch09.html" aria-current="page">한국어</a></nav>
+</header>
+<main>
+<h1>9. 내보내기·불러오기에서 주의할 점</h1>
+<p class="lead">법선은 도중에 다시 만들어질 수 있다.</p>
+<section class="demo" id="demo" data-scene="import">
+<div class="stage"><canvas id="view" width="380" height="380"></canvas></div>
+<div class="controls">
+  <fieldset><legend>불러온 뒤의 법선</legend><label><input type="radio" name="importMode" value="keep" checked> A 파일의 법선을 그대로 사용</label><label><input type="radio" name="importMode" value="recalc"> B 다시 계산</label><label><input type="radio" name="importMode" value="split"> C 작은 각도로 나누어 다시 계산</label><label><input type="radio" name="importMode" value="mirror"> D 거울 반전(음수 스케일), 면 방향을 고치지 않음</label></fieldset>
+  <label class="row"><span>빛의 방향 (좌우)<output id="azOut"></output></span>
+<input type="range" id="az" min="-180" max="180" step="1" value="-40"></label>
+  <label class="row"><span>빛의 높이<output id="elOut"></output></span>
+<input type="range" id="el" min="-80" max="80" step="1" value="30"></label>
+  <label><input type="checkbox" id="toon" checked> 툰으로 표시</label>
+  <label class="row"><span>툰 임계값<output id="toonTOut"></output></span>
+<input type="range" id="toonT" min="-0.9" max="0.9" step="0.05" value="0.3"></label>
+  <label><input type="checkbox" id="showNormals"> 정점 법선 표시</label>
+  <div class="hint">삼각형 수: <span id="triOut"></span> · 그림을 드래그하면 돌릴 수 있습니다.</div>
+</div>
+</section>
+<script src="../assets/normals.js"></script>
+<script>NormalsDemo.viewer();</script>
+<ul class="notes">
+<li>A: 파일에 들어 있던 법선(여기서는 그림자를 정돈한 커스텀 법선)을 그대로 씁니다.</li>
+<li>B: 불러오는 쪽에서 다시 계산하면 커스텀 법선이 사라지고, 모양 그대로의 얼룩진 그림자로 돌아갑니다.</li>
+<li>C: 작은 각도로 나누어 다시 계산하면 매끄러운 곳까지 모서리가 됩니다.</li>
+<li>D: 거울 반전했는데 면 방향(정점 순서)을 고치지 않으면 법선이 안쪽을 향해 밝기가 반대가 됩니다.</li>
+</ul>
+<p><a href="https://github.com/gyogy6/Sayu_NormalsTips/blob/main/ko/09_export-and-import.md">자세한 설명 (GitHub)</a></p>
+<nav class="pager"><a href="ch08.html">← 8. 노멀 맵과의 관계</a><a href="index.html">목차 →</a></nav>
+</main>
+<footer>글과 그림: CC BY 4.0 / 코드: MIT</footer>
+</body>
+</html>

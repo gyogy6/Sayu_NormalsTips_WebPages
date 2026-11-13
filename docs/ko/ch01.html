@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1. 법선이란 — 법선 Tips</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="home" href="index.html">법선 Tips</a>
+  <nav class="lang" aria-label="Language"><a href="../ja/ch01.html">日本語</a><a href="../en/ch01.html">English</a><a href="../ko/ch01.html" aria-current="page">한국어</a></nav>
+</header>
+<main>
+<h1>1. 법선이란</h1>
+<p class="lead">면의 방향과 빛의 각도로 밝기가 정해지는 원리.</p>
+<section class="demo" id="demo">
+<div class="stage">
+  <canvas id="diagram" width="300" height="300"></canvas>
+  <div class="pair">
+    <figure><canvas id="sphere" width="200" height="200"></canvas><figcaption>매끄러움</figcaption></figure>
+    <figure><canvas id="sphereToon" width="200" height="200"></canvas><figcaption>툰</figcaption></figure>
+  </div>
+</div>
+<div class="controls">
+  <label class="row"><span>면의 기울기<output id="tiltOut"></output></span>
+<input type="range" id="tilt" min="-60" max="60" step="1" value="0"></label>
+  <label class="row"><span>빛의 방향<output id="lightOut"></output></span>
+<input type="range" id="light" min="-180" max="180" step="1" value="40"></label>
+  <label class="row"><span>툰 임계값<output id="toonTOut"></output></span>
+<input type="range" id="toonT" min="-0.9" max="0.9" step="0.05" value="0.3"></label>
+  <div class="readout">
+    <span>N과 L 사이의 각도 θ</span><b id="thetaOut"></b>
+    <span>N·L = cos θ</span><b id="dotOut"></b>
+    <span>밝기 max(0, N·L)</span><b id="brightOut"></b>
+    <span>툰 (1 = 밝음, 0 = 그림자)</span><b id="toonOut"></b>
+  </div>
+</div>
+</section>
+<script src="../assets/normals.js"></script>
+<script>NormalsDemo.ch01();</script>
+<ul class="notes">
+<li><b>N</b>은 면의 법선(면에 수직이고 길이가 1인 방향), <b>L</b>은 빛이 오는 방향입니다.</li>
+<li>밝기는 <code>max(0, N·L)</code> = <code>max(0, cos θ)</code>입니다. 빛이 정면이면 1, 옆이면 0, 뒤에서 와도 0입니다.</li>
+<li>툰은 <code>N·L</code>이 임계값보다 큰지 아닌지로 두 가지 색으로 나눕니다. 임계값 근처에서는 아주 작은 방향 차이로 색이 바뀝니다.</li>
+<li>'면의 기울기'와 '빛의 방향' 중 무엇을 움직여도, 밝기는 두 <b>각도의 차이</b>로만 정해집니다.</li>
+</ul>
+<p><a href="https://github.com/gyogy6/Sayu_NormalsTips/blob/main/ko/01_what-is-a-normal.md">자세한 설명 (GitHub)</a></p>
+<nav class="pager"><a href="index.html">← 목차</a><a href="ch02.html">2. 면 법선과 정점 법선 →</a></nav>
+</main>
+<footer>글과 그림: CC BY 4.0 / 코드: MIT</footer>
+</body>
+</html>

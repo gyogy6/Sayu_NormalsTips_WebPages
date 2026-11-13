@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7. 툰에서 법선 차이가 눈에 띄는 이유 — 법선 Tips</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="home" href="index.html">법선 Tips</a>
+  <nav class="lang" aria-label="Language"><a href="../ja/ch07.html">日本語</a><a href="../en/ch07.html">English</a><a href="../ko/ch07.html" aria-current="page">한국어</a></nav>
+</header>
+<main>
+<h1>7. 툰에서 법선 차이가 눈에 띄는 이유</h1>
+<p class="lead">임계값과 면이 휘는 정도.</p>
+<section class="demo" id="demo" data-scene="noise">
+<div class="stage"><canvas id="view" width="380" height="380"></canvas></div>
+<div class="controls">
+  <label class="row"><span>울퉁불퉁한 정도<output id="ampOut"></output></span>
+<input type="range" id="amp" min="0" max="0.06" step="0.005" value="0.025"></label>
+  <label class="row"><span>그림자 가장자리 흐림<output id="softOut"></output></span>
+<input type="range" id="soft" min="0" max="0.3" step="0.01" value="0"></label>
+  <label class="row"><span>빛의 방향 (좌우)<output id="azOut"></output></span>
+<input type="range" id="az" min="-180" max="180" step="1" value="-40"></label>
+  <label class="row"><span>빛의 높이<output id="elOut"></output></span>
+<input type="range" id="el" min="-80" max="80" step="1" value="30"></label>
+  <label><input type="checkbox" id="toon" checked> 툰으로 표시</label>
+  <label class="row"><span>툰 임계값<output id="toonTOut"></output></span>
+<input type="range" id="toonT" min="-0.9" max="0.9" step="0.05" value="0.3"></label>
+  <label><input type="checkbox" id="showNormals"> 정점 법선 표시</label>
+  <div class="hint">삼각형 수: <span id="triOut"></span> · 그림을 드래그하면 돌릴 수 있습니다.</div>
+</div>
+</section>
+<script src="../assets/normals.js"></script>
+<script>NormalsDemo.viewer();</script>
+<ul class="notes">
+<li>구에 거의 보이지 않을 만큼 작은 요철을 붙였습니다. 매끄러운 밝기(툰 끄기)에서는 거의 알 수 없습니다.</li>
+<li>툰으로 하면 그림자 가장자리가 물결칩니다. 임계값 근처에서는 작은 법선 차이가 그대로 선의 모양이 되기 때문입니다.</li>
+<li>'그림자 가장자리 흐림'을 올리면 임계값 앞뒤를 조금 매끄럽게 이어서 물결이 덜 눈에 띕니다.</li>
+</ul>
+<p><a href="https://github.com/gyogy6/Sayu_NormalsTips/blob/main/ko/07_why-toon-shows-normal-errors.md">자세한 설명 (GitHub)</a></p>
+<nav class="pager"><a href="ch06.html">← 6. 따로 있는 메시의 이음매</a><a href="ch08.html">8. 노멀 맵과의 관계 →</a></nav>
+</main>
+<footer>글과 그림: CC BY 4.0 / 코드: MIT</footer>
+</body>
+</html>

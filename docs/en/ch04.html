@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4. Hard edges and UV seams — Normals Tips</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="home" href="index.html">Normals Tips</a>
+  <nav class="lang" aria-label="Language"><a href="../ja/ch04.html">日本語</a><a href="../en/ch04.html" aria-current="page">English</a><a href="../ko/ch04.html">한국어</a></nav>
+</header>
+<main>
+<h1>4. Hard edges and UV seams</h1>
+<p class="lead">Split vertices do not break the shading. Split normals do.</p>
+<section class="demo" id="demo" data-scene="seam">
+<div class="stage"><canvas id="view" width="380" height="380"></canvas></div>
+<div class="controls">
+  <label class="row"><span>Segments<output id="segOut"></output></span>
+<input type="range" id="seg" min="6" max="24" step="1" value="12"></label>
+  <fieldset><legend>Normals on the seam</legend><label><input type="radio" name="seamMode" value="joined"> Matched (average faces on both sides)</label><label><input type="radio" name="seamMode" value="separate" checked> Separate (each side averages its own faces)</label></fieldset>
+  <label class="row"><span>Light direction (left/right)<output id="azOut"></output></span>
+<input type="range" id="az" min="-180" max="180" step="1" value="-40"></label>
+  <label class="row"><span>Light height<output id="elOut"></output></span>
+<input type="range" id="el" min="-80" max="80" step="1" value="30"></label>
+  <label><input type="checkbox" id="toon" checked> Toon shading</label>
+  <label class="row"><span>Toon threshold<output id="toonTOut"></output></span>
+<input type="range" id="toonT" min="-0.9" max="0.9" step="0.05" value="0.3"></label>
+  <label><input type="checkbox" id="showNormals"> Show vertex normals</label>
+  <div class="hint">Vertices: <span id="vertOut"></span> · Drag the view to turn it.</div>
+</div>
+</section>
+<script src="../assets/normals.js"></script>
+<script>NormalsDemo.viewer();</script>
+<ul class="notes">
+<li>This sphere has split vertices along the vertical line in front (the same as a UV seam).</li>
+<li><b>Matched</b>: the split vertices share the same normal, so the shading does not break. Being split is not a problem in itself.</li>
+<li><b>Separate</b>: each split vertex averages only the faces on its own side. The two sides point differently, so a shading line appears along the seam. Turn the light with toon shading to see it clearly.</li>
+<li>With “Show vertex normals” you can see whether each seam point has two normals or one.</li>
+</ul>
+<p><a href="https://github.com/gyogy6/Sayu_NormalsTips/blob/main/en/04_hard-edges-and-uv-seams.md">Full explanation (GitHub)</a></p>
+<nav class="pager"><a href="ch03.html">← 3. How to average vertex normals</a><a href="ch05.html">5. Custom normals →</a></nav>
+</main>
+<footer>Text and figures: CC BY 4.0 / Code: MIT</footer>
+</body>
+</html>

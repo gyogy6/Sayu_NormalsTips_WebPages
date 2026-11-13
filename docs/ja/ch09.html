@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>9. 書き出し・読み込みでの注意 — 法線の Tips</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="home" href="index.html">法線の Tips</a>
+  <nav class="lang" aria-label="Language"><a href="../ja/ch09.html" aria-current="page">日本語</a><a href="../en/ch09.html">English</a><a href="../ko/ch09.html">한국어</a></nav>
+</header>
+<main>
+<h1>9. 書き出し・読み込みでの注意</h1>
+<p class="lead">法線は途中で作り直されることがある。</p>
+<section class="demo" id="demo" data-scene="import">
+<div class="stage"><canvas id="view" width="380" height="380"></canvas></div>
+<div class="controls">
+  <fieldset><legend>読み込んだときの法線</legend><label><input type="radio" name="importMode" value="keep" checked> A ファイルの法線をそのまま使う</label><label><input type="radio" name="importMode" value="recalc"> B 計算し直す</label><label><input type="radio" name="importMode" value="split"> C 小さい角度で分けて計算し直す</label><label><input type="radio" name="importMode" value="mirror"> D 鏡に映して（マイナスの拡大）面の向きを直さない</label></fieldset>
+  <label class="row"><span>光の向き（左右）<output id="azOut"></output></span>
+<input type="range" id="az" min="-180" max="180" step="1" value="-40"></label>
+  <label class="row"><span>光の高さ<output id="elOut"></output></span>
+<input type="range" id="el" min="-80" max="80" step="1" value="30"></label>
+  <label><input type="checkbox" id="toon" checked> トゥーンで表示</label>
+  <label class="row"><span>トゥーンのしきい値<output id="toonTOut"></output></span>
+<input type="range" id="toonT" min="-0.9" max="0.9" step="0.05" value="0.3"></label>
+  <label><input type="checkbox" id="showNormals"> 頂点の法線を表示</label>
+  <div class="hint">三角形の数: <span id="triOut"></span> · 図をドラッグすると回せます。</div>
+</div>
+</section>
+<script src="../assets/normals.js"></script>
+<script>NormalsDemo.viewer();</script>
+<ul class="notes">
+<li>A：ファイルに入っていた法線（ここでは影を整えたカスタム法線）をそのまま使っています。</li>
+<li>B：読み込む側で計算し直すと、カスタム法線が消えて、形どおりのまだらな影に戻ります。</li>
+<li>C：小さい角度で分けて計算し直すと、なめらかな所まで角になります。</li>
+<li>D：鏡に映したのに面の向き（頂点の順番）を直さないと、法線が内側を向いて、明るさが反対になります。</li>
+</ul>
+<p><a href="https://github.com/gyogy6/Sayu_NormalsTips/blob/main/ja/09_export-and-import.md">くわしい解説（GitHub）</a></p>
+<nav class="pager"><a href="ch08.html">← 8. ノーマルマップとの関係</a><a href="index.html">目次へ →</a></nav>
+</main>
+<footer>文章と図: CC BY 4.0 ／ コード: MIT</footer>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3. 정점 법선을 평균 내는 방법 — 법선 Tips</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="home" href="index.html">법선 Tips</a>
+  <nav class="lang" aria-label="Language"><a href="../ja/ch03.html">日本語</a><a href="../en/ch03.html">English</a><a href="../ko/ch03.html" aria-current="page">한국어</a></nav>
+</header>
+<main>
+<h1>3. 정점 법선을 평균 내는 방법</h1>
+<p class="lead">단순 평균, 면적 가중치, 각도 가중치.</p>
+<section class="demo" id="demo" data-scene="basic">
+<div class="stage"><canvas id="view" width="380" height="380"></canvas></div>
+<div class="controls">
+  <label class="row"><span>모양</span><select id="shape"><option value="bevel" selected>모서리를 깎은 상자</option><option value="cylinder">원기둥</option><option value="sphere">구</option></select></label>
+  <div id="segRow"><label class="row"><span>분할 수<output id="segOut"></output></span>
+<input type="range" id="seg" min="4" max="32" step="1" value="12"></label></div>
+  <fieldset><legend>평균 방법</legend><label><input type="radio" name="weight" value="uniform" checked> A 단순 평균</label><label><input type="radio" name="weight" value="area"> B 면적 가중치</label><label><input type="radio" name="weight" value="angle"> C 각도 가중치</label></fieldset>
+  <label class="row"><span>빛의 방향 (좌우)<output id="azOut"></output></span>
+<input type="range" id="az" min="-180" max="180" step="1" value="-40"></label>
+  <label class="row"><span>빛의 높이<output id="elOut"></output></span>
+<input type="range" id="el" min="-80" max="80" step="1" value="30"></label>
+  <label><input type="checkbox" id="toon"> 툰으로 표시</label>
+  <label class="row"><span>툰 임계값<output id="toonTOut"></output></span>
+<input type="range" id="toonT" min="-0.9" max="0.9" step="0.05" value="0.3"></label>
+  <label><input type="checkbox" id="showNormals"> 정점 법선 표시</label>
+  <div class="hint">삼각형 수: <span id="triOut"></span> · 그림을 드래그하면 돌릴 수 있습니다.</div>
+</div>
+</section>
+<script src="../assets/normals.js"></script>
+<script>NormalsDemo.viewer();</script>
+<ul class="notes">
+<li><b>A 단순 평균</b>: 주변 삼각형을 모두 같은 무게로 더합니다. 삼각형을 나누는 방식에 따라 결과가 달라집니다.</li>
+<li><b>B 면적 가중치</b>: 큰 삼각형일수록 강하게 작용합니다. 모서리를 깎은 상자에서는 넓은 면이 평평하게 보입니다.</li>
+<li><b>C 각도 가중치</b>: 그 정점에서의 삼각형 각도로 무게를 정합니다. 평평한 면을 어떻게 나눠도 각도의 합은 같으므로, 나누는 방식에 영향을 받지 않습니다.</li>
+<li>원기둥 뚜껑은 한 정점에서 부채꼴로 나누어져 있습니다. A에서는 그 정점 주변만 그림자가 일그러지고, C에서는 일그러지지 않습니다.</li>
+</ul>
+<p><a href="https://github.com/gyogy6/Sayu_NormalsTips/blob/main/ko/03_averaging-vertex-normals.md">자세한 설명 (GitHub)</a></p>
+<nav class="pager"><a href="ch02.html">← 2. 면 법선과 정점 법선</a><a href="ch04.html">4. 하드 엣지와 UV 이음매 →</a></nav>
+</main>
+<footer>글과 그림: CC BY 4.0 / 코드: MIT</footer>
+</body>
+</html>

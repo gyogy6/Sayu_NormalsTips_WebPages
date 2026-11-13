@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1. 法線とは — 法線の Tips</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="home" href="index.html">法線の Tips</a>
+  <nav class="lang" aria-label="Language"><a href="../ja/ch01.html" aria-current="page">日本語</a><a href="../en/ch01.html">English</a><a href="../ko/ch01.html">한국어</a></nav>
+</header>
+<main>
+<h1>1. 法線とは</h1>
+<p class="lead">面の向きと、光との角度で明るさが決まるしくみ。</p>
+<section class="demo" id="demo">
+<div class="stage">
+  <canvas id="diagram" width="300" height="300"></canvas>
+  <div class="pair">
+    <figure><canvas id="sphere" width="200" height="200"></canvas><figcaption>なめらか</figcaption></figure>
+    <figure><canvas id="sphereToon" width="200" height="200"></canvas><figcaption>トゥーン</figcaption></figure>
+  </div>
+</div>
+<div class="controls">
+  <label class="row"><span>面の傾き<output id="tiltOut"></output></span>
+<input type="range" id="tilt" min="-60" max="60" step="1" value="0"></label>
+  <label class="row"><span>光の向き<output id="lightOut"></output></span>
+<input type="range" id="light" min="-180" max="180" step="1" value="40"></label>
+  <label class="row"><span>トゥーンのしきい値<output id="toonTOut"></output></span>
+<input type="range" id="toonT" min="-0.9" max="0.9" step="0.05" value="0.3"></label>
+  <div class="readout">
+    <span>N と L の角度 θ</span><b id="thetaOut"></b>
+    <span>N·L = cos θ</span><b id="dotOut"></b>
+    <span>明るさ max(0, N·L)</span><b id="brightOut"></b>
+    <span>トゥーン（1 = 明るい、0 = 影）</span><b id="toonOut"></b>
+  </div>
+</div>
+</section>
+<script src="../assets/normals.js"></script>
+<script>NormalsDemo.ch01();</script>
+<ul class="notes">
+<li><b>N</b> は面の法線（面に垂直な、長さ 1 の向き）、<b>L</b> は光が来る向きです。</li>
+<li>明るさは <code>max(0, N·L)</code> = <code>max(0, cos θ)</code>。光が真正面なら 1、横からなら 0、後ろからでも 0 です。</li>
+<li>トゥーンは <code>N·L</code> がしきい値より大きいかどうかで 2 色に分けます。しきい値の近くでは、わずかな向きの差で色が入れ替わります。</li>
+<li>「面の傾き」と「光の向き」のどちらを動かしても、明るさは 2 つの<b>角度の差</b>だけで決まります。</li>
+</ul>
+<p><a href="https://github.com/gyogy6/Sayu_NormalsTips/blob/main/ja/01_what-is-a-normal.md">くわしい解説（GitHub）</a></p>
+<nav class="pager"><a href="index.html">← 目次へ</a><a href="ch02.html">2. 面の法線と頂点の法線 →</a></nav>
+</main>
+<footer>文章と図: CC BY 4.0 ／ コード: MIT</footer>
+</body>
+</html>

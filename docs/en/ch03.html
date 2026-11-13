@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3. How to average vertex normals — Normals Tips</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="home" href="index.html">Normals Tips</a>
+  <nav class="lang" aria-label="Language"><a href="../ja/ch03.html">日本語</a><a href="../en/ch03.html" aria-current="page">English</a><a href="../ko/ch03.html">한국어</a></nav>
+</header>
+<main>
+<h1>3. How to average vertex normals</h1>
+<p class="lead">Uniform, area-weighted and angle-weighted.</p>
+<section class="demo" id="demo" data-scene="basic">
+<div class="stage"><canvas id="view" width="380" height="380"></canvas></div>
+<div class="controls">
+  <label class="row"><span>Shape</span><select id="shape"><option value="bevel" selected>Beveled box</option><option value="cylinder">Cylinder</option><option value="sphere">Sphere</option></select></label>
+  <div id="segRow"><label class="row"><span>Segments<output id="segOut"></output></span>
+<input type="range" id="seg" min="4" max="32" step="1" value="12"></label></div>
+  <fieldset><legend>Averaging</legend><label><input type="radio" name="weight" value="uniform" checked> A Uniform</label><label><input type="radio" name="weight" value="area"> B Area-weighted</label><label><input type="radio" name="weight" value="angle"> C Angle-weighted</label></fieldset>
+  <label class="row"><span>Light direction (left/right)<output id="azOut"></output></span>
+<input type="range" id="az" min="-180" max="180" step="1" value="-40"></label>
+  <label class="row"><span>Light height<output id="elOut"></output></span>
+<input type="range" id="el" min="-80" max="80" step="1" value="30"></label>
+  <label><input type="checkbox" id="toon"> Toon shading</label>
+  <label class="row"><span>Toon threshold<output id="toonTOut"></output></span>
+<input type="range" id="toonT" min="-0.9" max="0.9" step="0.05" value="0.3"></label>
+  <label><input type="checkbox" id="showNormals"> Show vertex normals</label>
+  <div class="hint">Triangles: <span id="triOut"></span> · Drag the view to turn it.</div>
+</div>
+</section>
+<script src="../assets/normals.js"></script>
+<script>NormalsDemo.viewer();</script>
+<ul class="notes">
+<li><b>A Uniform</b>: every surrounding triangle counts the same. The result depends on how the surface is split into triangles.</li>
+<li><b>B Area-weighted</b>: bigger triangles count more. On the beveled box, the large faces stay flat.</li>
+<li><b>C Angle-weighted</b>: each triangle counts by its corner angle at the vertex. However a flat area is split, the angles add up to the same total, so the split does not matter.</li>
+<li>The cylinder caps are split as a fan from one vertex. With A, the shading bends around that vertex; with C it does not.</li>
+</ul>
+<p><a href="https://github.com/gyogy6/Sayu_NormalsTips/blob/main/en/03_averaging-vertex-normals.md">Full explanation (GitHub)</a></p>
+<nav class="pager"><a href="ch02.html">← 2. Face normals and vertex normals</a><a href="ch04.html">4. Hard edges and UV seams →</a></nav>
+</main>
+<footer>Text and figures: CC BY 4.0 / Code: MIT</footer>
+</body>
+</html>

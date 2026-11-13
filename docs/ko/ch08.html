@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>8. 노멀 맵과의 관계 — 법선 Tips</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="home" href="index.html">법선 Tips</a>
+  <nav class="lang" aria-label="Language"><a href="../ja/ch08.html">日本語</a><a href="../en/ch08.html">English</a><a href="../ko/ch08.html" aria-current="page">한국어</a></nav>
+</header>
+<main>
+<h1>8. 노멀 맵과의 관계</h1>
+<p class="lead">노멀 맵은 정점 법선을 바탕으로 한다.</p>
+<section class="demo" id="demo" data-scene="nmap">
+<div class="stage"><canvas id="view" width="380" height="380"></canvas></div>
+<div class="controls">
+  <label><input type="checkbox" id="useMap" checked> 노멀 맵 사용</label>
+  <label class="row"><span>노멀 맵 세기<output id="strengthOut"></output></span>
+<input type="range" id="strength" min="0" max="1.5" step="0.05" value="0.6"></label>
+  <label><input type="checkbox" id="flipGreen"> 초록(Y)을 반대로 읽기</label>
+  <fieldset><legend>바탕 정점 법선</legend><label><input type="radio" name="nbase" value="smooth" checked> 스무스 (정점 법선)</label><label><input type="radio" name="nbase" value="flat"> 플랫 (면 법선)</label></fieldset>
+  <label class="row"><span>빛의 방향 (좌우)<output id="azOut"></output></span>
+<input type="range" id="az" min="-180" max="180" step="1" value="-40"></label>
+  <label class="row"><span>빛의 높이<output id="elOut"></output></span>
+<input type="range" id="el" min="-80" max="80" step="1" value="50"></label>
+  <label><input type="checkbox" id="toon"> 툰으로 표시</label>
+  <label class="row"><span>툰 임계값<output id="toonTOut"></output></span>
+<input type="range" id="toonT" min="-0.9" max="0.9" step="0.05" value="0.3"></label>
+  <label><input type="checkbox" id="showNormals"> 정점 법선 표시</label>
+  <div class="hint">삼각형 수: <span id="triOut"></span> · 그림을 드래그하면 돌릴 수 있습니다.</div>
+</div>
+</section>
+<script src="../assets/normals.js"></script>
+<script>NormalsDemo.viewer();</script>
+<ul class="notes">
+<li>노멀 맵은 정점 법선(과 UV 방향)을 바탕으로, 그 위에서 법선을 조금 기울이는 정보입니다.</li>
+<li>'초록(Y)을 반대로 읽기'를 켜면 요철의 위아래가 뒤집혀서 빛이 이상하게 닿습니다.</li>
+<li>바탕을 '플랫'으로 하면 같은 노멀 맵이라도 면의 모서리가 보입니다. 바탕 법선이 바뀌면 결과도 바뀝니다.</li>
+</ul>
+<p><a href="https://github.com/gyogy6/Sayu_NormalsTips/blob/main/ko/08_normal-maps.md">자세한 설명 (GitHub)</a></p>
+<nav class="pager"><a href="ch07.html">← 7. 툰에서 법선 차이가 눈에 띄는 이유</a><a href="ch09.html">9. 내보내기·불러오기에서 주의할 점 →</a></nav>
+</main>
+<footer>글과 그림: CC BY 4.0 / 코드: MIT</footer>
+</body>
+</html>
