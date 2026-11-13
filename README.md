@@ -4,7 +4,7 @@
 
 An illustrated guide to **normals** in 3D graphics, with animations and interactive figures.
 
-**▶ Interactive figures (GitHub Pages): https://gyogy6.github.io/Sayu_NormalsTips/en/**
+**▶ Interactive figures (GitHub Pages): https://gyogy6.github.io/Sayu_NormalsTips_WebPages/en/**
 
 ![Normals and the light angle](images/ch01_ndotl.gif)
 
