@@ -4,7 +4,7 @@
 
 3DCG の **法線（ノーマル）** の考え方を、アニメーションと触れる図で説明する資料です。
 
-**▶ 触れる図（GitHub Pages）：https://gyogy6.github.io/Sayu_NormalsTips/ja/**
+**▶ 触れる図（GitHub Pages）：https://gyogy6.github.io/Sayu_NormalsTips_WebPages/ja/**
 
 ![法線と光の角度](images/ch01_ndotl.gif)
 
