@@ -8,7 +8,7 @@
 
 *左：でこぼこした面の断面と、その法線。t が 0 のときは面の形どおり、t が 1 のときは点線の円の法線（中心から外向き）になります。中・右：でこぼこした球に同じことをしたもの（なめらか／トゥーン）。輪郭はでこぼこのままです。*
 
-**▶ 触って試す：[触れる図（GitHub Pages）](https://gyogy6.github.io/Sayu_NormalsTips/ja/ch05.html)**
+**▶ 触って試す：[触れる図（GitHub Pages）](https://gyogy6.github.io/Sayu_NormalsTips_WebPages/ja/ch05.html)**
 
 ## 法線は、形から計算しなくてもいい
 

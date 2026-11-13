@@ -8,7 +8,7 @@
 
 *A：なめらかな頂点の法線に、ノーマルマップを正しく使った。B：緑（Y）を反対に読んだ。C：同じノーマルマップを、フラットな低ポリゴンの球に使った。上：なめらか、下：トゥーン。*
 
-**▶ 触って試す：[触れる図（GitHub Pages）](https://gyogy6.github.io/Sayu_NormalsTips/ja/ch08.html)**
+**▶ 触って試す：[触れる図（GitHub Pages）](https://gyogy6.github.io/Sayu_NormalsTips_WebPages/ja/ch08.html)**
 
 ## ノーマルマップは「傾き」の情報
 

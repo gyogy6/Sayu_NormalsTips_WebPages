@@ -8,7 +8,7 @@
 
 *A sphere whose upper and lower parts are separate meshes (with different density). A: as is. B: only the seam vertices get matching normals. C: near the seam, normals are copied from a smooth shape, weaker with distance. Top: smooth, bottom: toon.*
 
-**▶ Try it: [interactive figure (GitHub Pages)](https://gyogy6.github.io/Sayu_NormalsTips/en/ch06.html)**
+**▶ Try it: [interactive figure (GitHub Pages)](https://gyogy6.github.io/Sayu_NormalsTips_WebPages/en/ch06.html)**
 
 ## Why the shading breaks
 

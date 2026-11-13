@@ -4,7 +4,7 @@
 
 # 3. 頂点法線の平均のしかた
 
-**▶ 触って試す：[触れる図（GitHub Pages）](https://gyogy6.github.io/Sayu_NormalsTips/ja/ch03.html)**
+**▶ 触って試す：[触れる図（GitHub Pages）](https://gyogy6.github.io/Sayu_NormalsTips_WebPages/ja/ch03.html)**
 
 2 章では「スムーズ＝まわりの面の法線の平均」と書きました。でも、**平均のしかたは 1 つではありません**。どれを使うかで、同じメッシュでも影の形が変わります。
 

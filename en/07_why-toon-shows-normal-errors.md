@@ -8,7 +8,7 @@
 
 *1: a smooth sphere. 2: a sphere with bumps so small you can hardly see them. A: smooth brightness. B: toon. C: toon with a slightly softened shadow edge.*
 
-**▶ Try it: [interactive figure (GitHub Pages)](https://gyogy6.github.io/Sayu_NormalsTips/en/ch07.html)**
+**▶ Try it: [interactive figure (GitHub Pages)](https://gyogy6.github.io/Sayu_NormalsTips_WebPages/en/ch07.html)**
 
 Earlier chapters kept saying "normal differences stand out in toon shading". This chapter looks at the two reasons.
 

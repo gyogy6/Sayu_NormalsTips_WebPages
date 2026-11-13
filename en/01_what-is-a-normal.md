@@ -8,7 +8,7 @@
 
 *Left: a surface with its normal N, the direction L the light comes from, and the angle θ between them. Middle: brightness against θ (black: smooth brightness, purple: toon, split into two steps at a threshold of 0.3). Right: a sphere under the same light (left smooth, right toon).*
 
-**▶ Try it: [interactive figure (GitHub Pages)](https://gyogy6.github.io/Sayu_NormalsTips/en/ch01.html)**
+**▶ Try it: [interactive figure (GitHub Pages)](https://gyogy6.github.io/Sayu_NormalsTips_WebPages/en/ch01.html)**
 
 ## A normal says which way a surface faces
 

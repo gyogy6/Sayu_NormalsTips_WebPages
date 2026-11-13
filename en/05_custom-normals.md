@@ -8,7 +8,7 @@
 
 *Left: a cross section of a bumpy surface and its normals. At t = 0 they follow the surface; at t = 1 they are the normals of the dotted circle (pointing out from the center). Middle and right: the same on a bumpy sphere (smooth / toon). The outline stays bumpy.*
 
-**▶ Try it: [interactive figure (GitHub Pages)](https://gyogy6.github.io/Sayu_NormalsTips/en/ch05.html)**
+**▶ Try it: [interactive figure (GitHub Pages)](https://gyogy6.github.io/Sayu_NormalsTips_WebPages/en/ch05.html)**
 
 ## Normals do not have to come from the shape
 

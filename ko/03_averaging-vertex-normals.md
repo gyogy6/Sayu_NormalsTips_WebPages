@@ -4,7 +4,7 @@
 
 # 3. 정점 법선을 평균 내는 방법
 
-**▶ 직접 해 보기: [움직이는 그림 (GitHub Pages)](https://gyogy6.github.io/Sayu_NormalsTips/ko/ch03.html)**
+**▶ 직접 해 보기: [움직이는 그림 (GitHub Pages)](https://gyogy6.github.io/Sayu_NormalsTips_WebPages/ko/ch03.html)**
 
 2장에서 '스무스 = 주변 면 법선의 평균'이라고 썼습니다. 하지만 **평균을 내는 방법은 하나가 아닙니다**. 어느 것을 쓰느냐에 따라 같은 메시라도 그림자 모양이 달라집니다.
 

@@ -8,7 +8,7 @@
 
 *左：面と法線 N、光が来る向き L、その間の角度 θ。中：θ と明るさのグラフ（黒：なめらかな明るさ、紫：トゥーンでしきい値 0.3 で 2 段に分けたもの）。右：同じ光で照らした球（左がなめらか、右がトゥーン）。*
 
-**▶ 触って試す：[触れる図（GitHub Pages）](https://gyogy6.github.io/Sayu_NormalsTips/ja/ch01.html)**
+**▶ 触って試す：[触れる図（GitHub Pages）](https://gyogy6.github.io/Sayu_NormalsTips_WebPages/ja/ch01.html)**
 
 ## 法線は「面がどっちを向いているか」
 

@@ -8,7 +8,7 @@
 
 *A sphere whose vertices are split along the vertical line in front. A: not split. B: split, but the normals match. C: split, and the normals were computed separately on each side. Top: smooth, bottom: toon.*
 
-**▶ Try it: [interactive figure (GitHub Pages)](https://gyogy6.github.io/Sayu_NormalsTips/en/ch04.html)**
+**▶ Try it: [interactive figure (GitHub Pages)](https://gyogy6.github.io/Sayu_NormalsTips_WebPages/en/ch04.html)**
 
 ## A vertex for drawing is a bundle of data
 

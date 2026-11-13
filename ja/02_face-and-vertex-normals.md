@@ -8,7 +8,7 @@
 
 *A：フラット　B：スムーズ。左の 2 つは断面で、青い点が表面を動くときの法線の向き。A では面の境目で向きが急に変わり、B ではなめらかに回ります。右の 2 つは同じ低ポリゴンの球を、それぞれの法線で照らしたものです。*
 
-**▶ 触って試す：[触れる図（GitHub Pages）](https://gyogy6.github.io/Sayu_NormalsTips/ja/ch02.html)**
+**▶ 触って試す：[触れる図（GitHub Pages）](https://gyogy6.github.io/Sayu_NormalsTips_WebPages/ja/ch02.html)**
 
 ## 面の法線
 

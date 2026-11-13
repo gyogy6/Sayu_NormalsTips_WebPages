@@ -8,7 +8,7 @@
 
 *위와 아래가 따로 있는 메시로 된 구(나누는 촘촘함도 다름). A: 그대로. B: 이음매 정점만 법선을 맞춤. C: 이음매 근처에서 매끄러운 모양의 법선을 거리에 따라 약하게 하면서 옮김. 위: 매끄러움, 아래: 툰.*
 
-**▶ 직접 해 보기: [움직이는 그림 (GitHub Pages)](https://gyogy6.github.io/Sayu_NormalsTips/ko/ch06.html)**
+**▶ 직접 해 보기: [움직이는 그림 (GitHub Pages)](https://gyogy6.github.io/Sayu_NormalsTips_WebPages/ko/ch06.html)**
 
 ## 왜 갈라지는가
 

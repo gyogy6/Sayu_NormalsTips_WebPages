@@ -8,7 +8,7 @@
 
 *上と下が別々のメッシュでできた球（分け方の細かさも違う）。A：そのまま。B：継ぎ目の頂点だけ法線をそろえた。C：継ぎ目の近くで、なめらかな形の法線を、距離で弱めながら写した。上：なめらか、下：トゥーン。*
 
-**▶ 触って試す：[触れる図（GitHub Pages）](https://gyogy6.github.io/Sayu_NormalsTips/ja/ch06.html)**
+**▶ 触って試す：[触れる図（GitHub Pages）](https://gyogy6.github.io/Sayu_NormalsTips_WebPages/ja/ch06.html)**
 
 ## なぜ割れるのか
 

@@ -8,7 +8,7 @@
 
 *그림자를 정돈한 커스텀 법선을 가진 울퉁불퉁한 구. A: 파일의 법선을 그대로 사용. B: 불러올 때 법선을 다시 계산. C: 작은 각도로 나누어 다시 계산. D: 거울 반전(음수 스케일)했는데 면 방향을 고치지 않음. 위: 매끄러움, 아래: 툰.*
 
-**▶ 직접 해 보기: [움직이는 그림 (GitHub Pages)](https://gyogy6.github.io/Sayu_NormalsTips/ko/ch09.html)**
+**▶ 직접 해 보기: [움직이는 그림 (GitHub Pages)](https://gyogy6.github.io/Sayu_NormalsTips_WebPages/ko/ch09.html)**
 
 만든 곳에서는 그림자가 깨끗했는데, 다른 소프트웨어나 게임 엔진으로 가져가면 그림자가 바뀝니다. 흔한 일입니다. 원인의 대부분은 **도중에 법선이 다시 만들어진 것**입니다.
 

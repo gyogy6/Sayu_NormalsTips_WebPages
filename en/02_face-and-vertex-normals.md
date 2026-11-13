@@ -8,7 +8,7 @@
 
 *A: flat, B: smooth. The two on the left are cross sections; the blue point moves along the surface and shows its normal. In A the direction jumps at each face border; in B it turns smoothly. The two on the right are the same low-poly sphere lit with each kind of normal.*
 
-**▶ Try it: [interactive figure (GitHub Pages)](https://gyogy6.github.io/Sayu_NormalsTips/en/ch02.html)**
+**▶ Try it: [interactive figure (GitHub Pages)](https://gyogy6.github.io/Sayu_NormalsTips_WebPages/en/ch02.html)**
 
 ## Face normals
 

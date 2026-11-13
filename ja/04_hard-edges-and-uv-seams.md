@@ -8,7 +8,7 @@
 
 *手前の縦の線で頂点が分かれている球。A：頂点が分かれていない。B：分かれているが、法線はそろっている。C：分かれていて、法線を両側で別々に計算した。上：なめらか、下：トゥーン。*
 
-**▶ 触って試す：[触れる図（GitHub Pages）](https://gyogy6.github.io/Sayu_NormalsTips/ja/ch04.html)**
+**▶ 触って試す：[触れる図（GitHub Pages）](https://gyogy6.github.io/Sayu_NormalsTips_WebPages/ja/ch04.html)**
 
 ## 描くときの「頂点」は、データの組
 

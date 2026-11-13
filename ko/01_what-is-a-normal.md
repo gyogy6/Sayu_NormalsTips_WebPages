@@ -8,7 +8,7 @@
 
 *왼쪽: 면과 법선 N, 빛이 오는 방향 L, 그 사이의 각도 θ. 가운데: θ에 따른 밝기 그래프(검정: 매끄러운 밝기, 보라: 툰으로 임계값 0.3에서 두 단계로 나눈 것). 오른쪽: 같은 빛을 받은 구(왼쪽은 매끄러움, 오른쪽은 툰).*
 
-**▶ 직접 해 보기: [움직이는 그림 (GitHub Pages)](https://gyogy6.github.io/Sayu_NormalsTips/ko/ch01.html)**
+**▶ 직접 해 보기: [움직이는 그림 (GitHub Pages)](https://gyogy6.github.io/Sayu_NormalsTips_WebPages/ko/ch01.html)**
 
 ## 법선은 '면이 어느 쪽을 향하는가'
 

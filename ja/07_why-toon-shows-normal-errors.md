@@ -8,7 +8,7 @@
 
 *1：なめらかな球。2：ほとんど見えないほど小さなでこぼこを付けた球。A：なめらかな明るさ。B：トゥーン。C：影のふちを少しぼかしたトゥーン。*
 
-**▶ 触って試す：[触れる図（GitHub Pages）](https://gyogy6.github.io/Sayu_NormalsTips/ja/ch07.html)**
+**▶ 触って試す：[触れる図（GitHub Pages）](https://gyogy6.github.io/Sayu_NormalsTips_WebPages/ja/ch07.html)**
 
 ここまでの章で何度も「トゥーンでは法線の差が目立つ」と書きました。この章では、その理由を 2 つに分けて見ます。
 

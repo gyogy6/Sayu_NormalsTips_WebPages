@@ -8,7 +8,7 @@
 
 *A bumpy sphere with custom normals that clean up its shading. A: the normals in the file are used as is. B: normals recomputed on import. C: recomputed and split at a small angle. D: mirrored (negative scale) without fixing the face direction. Top: smooth, bottom: toon.*
 
-**▶ Try it: [interactive figure (GitHub Pages)](https://gyogy6.github.io/Sayu_NormalsTips/en/ch09.html)**
+**▶ Try it: [interactive figure (GitHub Pages)](https://gyogy6.github.io/Sayu_NormalsTips_WebPages/en/ch09.html)**
 
 The shading looked clean where you made the model, but it changes when you bring it into another application or game engine. This happens a lot, and the usual cause is that **the normals were rebuilt along the way**.
 

@@ -8,7 +8,7 @@
 
 *A: the normal map used correctly on smooth vertex normals. B: green (Y) read reversed. C: the same normal map on a flat-shaded low-poly sphere. Top: smooth, bottom: toon.*
 
-**▶ Try it: [interactive figure (GitHub Pages)](https://gyogy6.github.io/Sayu_NormalsTips/en/ch08.html)**
+**▶ Try it: [interactive figure (GitHub Pages)](https://gyogy6.github.io/Sayu_NormalsTips_WebPages/en/ch08.html)**
 
 ## A normal map stores a tilt
 

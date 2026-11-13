@@ -8,7 +8,7 @@
 
 *앞쪽 세로선에서 정점이 나뉜 구. A: 정점이 나뉘지 않음. B: 나뉘었지만 법선은 맞춰져 있음. C: 나뉘었고, 법선을 양쪽에서 따로 계산함. 위: 매끄러움, 아래: 툰.*
 
-**▶ 직접 해 보기: [움직이는 그림 (GitHub Pages)](https://gyogy6.github.io/Sayu_NormalsTips/ko/ch04.html)**
+**▶ 직접 해 보기: [움직이는 그림 (GitHub Pages)](https://gyogy6.github.io/Sayu_NormalsTips_WebPages/ko/ch04.html)**
 
 ## 그릴 때의 '정점'은 데이터 묶음
 

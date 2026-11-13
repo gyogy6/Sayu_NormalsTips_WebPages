@@ -4,7 +4,7 @@
 
 # 3. How to average vertex normals
 
-**▶ Try it: [interactive figure (GitHub Pages)](https://gyogy6.github.io/Sayu_NormalsTips/en/ch03.html)**
+**▶ Try it: [interactive figure (GitHub Pages)](https://gyogy6.github.io/Sayu_NormalsTips_WebPages/en/ch03.html)**
 
 Chapter 2 said "smooth = the average of the surrounding face normals". But **there is more than one way to average**, and the choice changes the shading of the same mesh.
 

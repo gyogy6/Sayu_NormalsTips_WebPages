@@ -8,7 +8,7 @@
 
 *1: 매끄러운 구. 2: 거의 보이지 않을 만큼 작은 요철을 붙인 구. A: 매끄러운 밝기. B: 툰. C: 그림자 가장자리를 조금 흐리게 한 툰.*
 
-**▶ 직접 해 보기: [움직이는 그림 (GitHub Pages)](https://gyogy6.github.io/Sayu_NormalsTips/ko/ch07.html)**
+**▶ 직접 해 보기: [움직이는 그림 (GitHub Pages)](https://gyogy6.github.io/Sayu_NormalsTips_WebPages/ko/ch07.html)**
 
 지금까지 여러 번 '툰에서는 법선 차이가 눈에 띈다'고 썼습니다. 이 장에서는 그 이유를 두 가지로 나눠서 봅니다.
 

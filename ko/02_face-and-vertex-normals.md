@@ -8,7 +8,7 @@
 
 *A: 플랫, B: 스무스. 왼쪽 두 개는 단면으로, 파란 점이 표면을 따라 움직일 때의 법선 방향입니다. A에서는 면의 경계에서 방향이 갑자기 바뀌고, B에서는 매끄럽게 돌아갑니다. 오른쪽 두 개는 같은 로우폴리 구를 각각의 법선으로 비춘 것입니다.*
 
-**▶ 직접 해 보기: [움직이는 그림 (GitHub Pages)](https://gyogy6.github.io/Sayu_NormalsTips/ko/ch02.html)**
+**▶ 직접 해 보기: [움직이는 그림 (GitHub Pages)](https://gyogy6.github.io/Sayu_NormalsTips_WebPages/ko/ch02.html)**
 
 ## 면 법선
 

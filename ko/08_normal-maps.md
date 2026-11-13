@@ -8,7 +8,7 @@
 
 *A: 매끄러운 정점 법선에 노멀 맵을 바르게 사용. B: 초록(Y)을 반대로 읽음. C: 같은 노멀 맵을 플랫한 로우폴리 구에 사용. 위: 매끄러움, 아래: 툰.*
 
-**▶ 직접 해 보기: [움직이는 그림 (GitHub Pages)](https://gyogy6.github.io/Sayu_NormalsTips/ko/ch08.html)**
+**▶ 직접 해 보기: [움직이는 그림 (GitHub Pages)](https://gyogy6.github.io/Sayu_NormalsTips_WebPages/ko/ch08.html)**
 
 ## 노멀 맵은 '기울기' 정보
 

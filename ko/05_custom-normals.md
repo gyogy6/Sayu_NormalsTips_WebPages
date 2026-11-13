@@ -8,7 +8,7 @@
 
 *왼쪽: 울퉁불퉁한 면의 단면과 그 법선. t가 0이면 면 모양 그대로, t가 1이면 점선 원의 법선(중심에서 바깥쪽)이 됩니다. 가운데·오른쪽: 울퉁불퉁한 구에 같은 것을 한 것(매끄러움 / 툰). 윤곽은 울퉁불퉁한 그대로입니다.*
 
-**▶ 직접 해 보기: [움직이는 그림 (GitHub Pages)](https://gyogy6.github.io/Sayu_NormalsTips/ko/ch05.html)**
+**▶ 직접 해 보기: [움직이는 그림 (GitHub Pages)](https://gyogy6.github.io/Sayu_NormalsTips_WebPages/ko/ch05.html)**
 
 ## 법선은 모양에서 계산하지 않아도 된다
 
